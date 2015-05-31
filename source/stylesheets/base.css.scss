@@ -1,0 +1,139 @@
+@import "normalize";
+
+$bright-highlight: #FF0000;
+
+h1 { color: $bright-highlight; }
+
+
+
+
+body {
+  color: #111;
+  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.5;
+  cursor: auto;
+
+  background-color: #ffffff;
+
+  //border-left: solid 2px;
+  //border-right: solid 2px;
+  //border-bottom: solid 2px;
+  
+  //border-width:2px; // creates border an all 4 sides
+  //border-color:#545454;
+  //border-style:solid;
+
+  width:800px;
+  height:auto; 
+  margin-left:auto;
+  margin-right:auto; 
+  vertical-align:text-middle;
+  //margin-top:       30px;
+  //margin-bottom:    30px; 
+  padding-left:     30px;
+  padding-right:    30px;
+  padding-top:      5px;
+  padding-bottom:   5px;
+  font-size:        13px; /* default css is 16 */
+  font-family:      "Noto Serif", serif; /* "Old Standard TT", "Gentium Book Basic", "Ubuntu" */
+  line-height:      170%;
+  text-align: justify;
+  text-shadow: 0 0 1px rgba(0,0,0,0.12);
+-webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, .3);
+   -moz-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, .3);
+        box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, .3);
+}
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Nunito:300);
+
+/*
+body { font-family: "Nunito", sans-serif; font-size: 24px; }
+a    { text-decoration: none; }
+p    { text-align: center; }
+sup  { font-size: 36px; font-weight: 100; line-height: 55px; }
+*/
+
+.button
+{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #0C5;
+
+  font-size: 24px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  
+  margin: 5em auto;
+  
+  position: absolute; 
+  top:0; right:0; bottom:0; left:0;
+  
+  padding: 20px 0;
+  width: 220px;
+  height:30px;
+  border-radius: 10px;
+
+  background: #0D6;
+  border: 1px solid #0D6;
+  color: #FFF;
+  overflow: hidden;
+  
+  transition: all 0.5s;
+}
+
+.button:hover, .button:active 
+{
+  text-decoration: none;
+  color: #0C5;
+  border-color: #0C5;
+  background: #FFF;
+}
+
+.button span 
+{
+  display: inline-block;
+  position: relative;
+  padding-right: 0;
+  
+  transition: padding-right 0.5s;
+}
+
+.button span:after 
+{
+  content: ' ';  
+  position: absolute;
+  top: 0;
+  right: -18px;
+  opacity: 0;
+  width: 10px;
+  height: 10px;
+  margin-top: -10px;
+
+  background: rgba(0, 0, 0, 0);
+  border: 3px solid #FFF;
+  border-top: none;
+  border-right: none;
+
+  transition: opacity 0.5s, top 0.5s, right 0.5s;
+  transform: rotate(-45deg);
+}
+
+.button:hover span, .button:active span 
+{
+  padding-right: 30px;
+}
+
+.button:hover span:after, .button:active span:after 
+{
+  transition: opacity 0.5s, top 0.5s, right 0.5s;
+  opacity: 1;
+  border-color: #0C5;
+  right: 0;
+  top: 50%;
+}
+
