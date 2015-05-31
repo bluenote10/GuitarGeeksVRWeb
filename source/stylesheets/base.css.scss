@@ -2,12 +2,52 @@
 
 $bright-highlight: #FF0000;
 
-h1 { color: $bright-highlight; }
+h1 {
+  color: #99A;
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: 1px;
+  //text-transform: uppercase;
+  text-shadow: 1px 2px 2px rgba(0,0,0, .8);
+  //background: url("../images/middleman.png") no-repeat center 100px;
+  //padding: 350px 0 10px;
+  padding: 80px 0 20px;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  font-variant: small-caps;
+}
 
 
 
+$image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEElEQVQImWNgYGD4z0AZAABABAEAuUSdjgAAAABJRU5ErkJggg==) repeat;
 
+html {
+  height: 100%;
+background: #45484d;
+background: -moz-linear-gradient(top,  #45484d 0%, #000000 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000));
+background: -webkit-linear-gradient(top,  #45484d 0%,#000000 100%);
+background: -o-linear-gradient(top,  #45484d 0%,#000000 100%);
+background: -ms-linear-gradient(top,  #45484d 0%,#000000 100%);
+background: linear-gradient(to bottom,  #45484d 0%,#000000 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
+background-attachment: fixed;
+  /* http://www.patternify.com/ */
+  background: $image;
+  background-color: #141925;
+}
+
+/*
 body {
+  background:url(
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEElEQVQImWNgYGD4z0AZAABABAEAuUSdjgAAAABJRU5ErkJggg==
+  ) repeat;
+  //background-color: #080F5E;
+  background-color: #141925;
+}
+*/
+
+.doc {
   color: #111;
   font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: normal;
@@ -40,10 +80,10 @@ body {
   font-family:      "Noto Serif", serif; /* "Old Standard TT", "Gentium Book Basic", "Ubuntu" */
   line-height:      170%;
   text-align: justify;
-  text-shadow: 0 0 1px rgba(0,0,0,0.12);
--webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, .3);
-   -moz-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, .3);
-        box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, .3);
+  text-shadow: 0 0 1px rgba(0,0,0,0.1);
+-webkit-box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, .5);
+   -moz-box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, .5);
+        box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, .5);
 }
 
 
@@ -73,7 +113,7 @@ sup  { font-size: 36px; font-weight: 100; line-height: 55px; }
   position: absolute; 
   top:0; right:0; bottom:0; left:0;
   
-  padding: 20px 0;
+  padding: 20px 10px;
   width: 220px;
   height:30px;
   border-radius: 10px;
@@ -137,3 +177,21 @@ sup  { font-size: 36px; font-weight: 100; line-height: 55px; }
   top: 50%;
 }
 
+
+
+.videowrapper {
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+.videowrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
