@@ -31,8 +31,13 @@
   <body class="<%= page_classes %>">
     <%= partial "navbar" %>
     <div class="doc">
-      <h1><span><%= current_page.data.title %></span></h1>
+      <div class="headdiv">
+        <h1><span><%= current_page.data.title %></span></h1>
+      </div>
       <%= yield %>
     </div>
+    <footer id="footer" role="contentinfo">
+      <%= partial "footer" %>
+    </footer>
   </body>
 </html>
