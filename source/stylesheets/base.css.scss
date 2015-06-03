@@ -55,6 +55,7 @@ background-attachment: fixed;
   /* http://www.patternify.com/ */
   background: $image;
   background-color: #141925;
+  background: url("../images/screenshot_fbo3.png")
 }
 
 /*
@@ -70,7 +71,7 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEElEQVQImW
 @import url(http://fonts.googleapis.com/css?family=Lato:300);
 
 .doc {
-  color: #222; // #ddd
+    color: #222; // #ddd
   font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: normal;
   font-style: normal;
