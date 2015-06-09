@@ -53,9 +53,10 @@ background: linear-gradient(to bottom,  #45484d 0%,#000000 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
 background-attachment: fixed;
   /* http://www.patternify.com/ */
-  background: $image;
-  background-color: #141925;
-  background: url("../images/screenshot_fbo3.png")
+  //background: $image;
+  //background-color: #141925;
+  
+  //background: url("../images/screenshot_fbo3.png")
 }
 
 /*
