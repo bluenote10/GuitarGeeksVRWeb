@@ -1,13 +1,88 @@
 ---
-title: GuitarGeeksVR
 ---
 
 <div class="welcome">
-  Play guitar in virtual reality.
-  <br />
 
+  <!-- 
+  Play guitar in virtual reality.
+  <br /> 
+  -->
+
+  <!--
   <%= image_tag '../images/WhiteExample.png', :width => '100%' %>
-  
+  -->
+
+<h1>What is GuitarGeeksVR?</h1>
+
+<p>
+GuitarGeeksVR is a software allowing to practice guitar by visualizing tablature in virtual reality.
+Its primary goal is to make practicing guitar fun, bridging the gap between musical notation and actual playing.
+GuitarGeeksVR is free and cross-platform.
+</p>
+
+<p>
+  <div class="videowrapper">
+    <iframe src="https://www.youtube.com/embed/dTiWn9KSMyg?controls=2"> </iframe>
+  </div>
+</p>
+
+
+<h1>Where can I get GuitarGeeksVR?</h1>
+
+<p>
+If you want to try out GuitarGeeksVR you can download it <%= link_to "here", "download.html"%>.
+Note that GuitarGeeksVR is designed specifically for VR and requires an Oculus Rift DK1/DK2.
+</p>
+
+
+
+
+<h1>What makes GuitarGeeksVR unique?</h1>
+
+<div>
+<div id="feature">
+  <div id="featureheader">VR support</div>
+  <div id="featuredesc">
+    GuitarGeeksVR is the first guitar practice tool to support stereoscopic vision. Visualizing guitar tablature is generally a three-dimensional problem, because each note has a time, a string, and a fret. Compared to 2D displays, VR can finally provide the missing third dimension.
+  </div>
+</div>
+
+
+<div id="feature">
+  <div id="featureheader">Practice Efficiency</div>
+  <div id="featuredesc">
+    GuitarGeeksVR is the first guitar practice tool to support stereoscopic vision. Visualizing guitar tablature is generally a three-dimensional problem, because each note has a time, a string, and a fret. Compared to 2D displays, VR can finally provide the missing third dimension.
+  </div>
+</div>
+
+
+<div id="feature">
+  <div id="featureheader">Huge Tab Collections</div>
+  <div id="featuredesc">
+    GuitarGeeksVR reads almost all MIDI-based tab formats (like GuitarPro). This means that you can get tabs for
+  </div>
+</div>
+
+<div class="clear"></div>
+</div>
+<!-- VR User Inferface: (maybe too technical feature)
+
+Marker System: (maybe include in practice efficiency)
+-->
+
+
+<h1>But this means I cannot see my guitar?</h1>
+
+<p>
+Yes, exactly.
+</p>
+
+
+
+<h1>How does GuitarGeeksVR compare to Rocksmith?</h1>
+
+Rocksmith is awesome -- at least, if you are satisfied with learning a few mainstream tabs. If you are interested in anything slightly more specific, there is no alternative to MIDI-based tabs unfortunately. In contrast to Rocksmith's proprietary music format, GuitarGeeksVR uses MIDI-based tabs. In terms of sound quality, Rocksmith stands head and shoulders... MIDI-based tabs sound crappy, but it allows you to play pretty much any tab you can find on the web -- and there is a lot of high quality tabs out there. Another advantage of the MIDI-based tabs: You can control playback speed and tuning arbitrarily without any sound artifacts.  
+
   Features:
   <ul>
     <li>Reads almost all Midi-based tablature formats, allowing to use huge tab collections.</li>
@@ -15,12 +90,4 @@ title: GuitarGeeksVR
   </ul>
 
   
-  <p>
-    <div class="videowrapper">
-      <iframe
-        src="https://www.youtube.com/embed/dTiWn9KSMyg?controls=2">
-      </iframe>
-    </div>
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p><!-- .doc -->
 </div><!-- .welcome -->

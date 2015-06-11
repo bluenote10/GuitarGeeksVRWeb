@@ -2,6 +2,20 @@
 
 $bright-highlight: #FF0000;
 
+.floatL {
+  float: left;
+}
+.floatR {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+.debug {
+  background-color: #F00;
+}
+
+/*
 .headdiv {
   margin-top: 20px;
   //margin: 12px;
@@ -36,7 +50,18 @@ h1 {
   color: rgba(1,1,1,0.5);
   text-shadow: 0px 0px 8px rgba(255,255,255,0.9);  
 }
+*/
 
+h1 {
+  margin-top: 60px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 1px;
+  margin: 0px;
+  color: rgba(1,1,1,0.8);
+  text-shadow: 0px 0px 8px rgba(0,0,0,0.3);  
+}
 
 
 $image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEElEQVQImWNgYGD4z0AZAABABAEAuUSdjgAAAABJRU5ErkJggg==) repeat;
@@ -71,15 +96,17 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEElEQVQImW
 
 @import url(http://fonts.googleapis.com/css?family=Lato:300);
 
+$mybgcol: #eee;
+
 .doc {
-    color: #222; // #ddd
+  color: #222; // #ddd
   font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: normal;
   font-style: normal;
-  line-height: 1.5;
+  line-height: 1.7;
   cursor: auto;
 
-  background-color: #eee; // #ffffff;
+  background-color: $mybgcol; // #eee; // #ffffff;
 
   //border-left: solid 2px;
   //border-right: solid 2px;
@@ -93,17 +120,17 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEElEQVQImW
   height:auto; 
   margin-left:auto;
   margin-right:auto; 
-  vertical-align:text-middle;
+  //vertical-align:text-middle;
   //margin-top:       30px;
   //margin-bottom:    30px; 
   padding-left:     30px;
   padding-right:    30px;
   padding-top:      5px;
   padding-bottom:   5px;
-  font-size:        20px; /* default css is 16 */
+  font-size:        18px; /* default css is 16 */
   //font-family:      "Noto Serif", serif; /* "Old Standard TT", "Gentium Book Basic", "Ubuntu" */
-  line-height:      170%;
   text-align: justify;
+  //text-align: center;
   text-shadow: 0 0 2px rgba(0,0,0,0.5);
   border-radius: 15px;
 -webkit-box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, .5);
@@ -111,6 +138,19 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEElEQVQImW
         box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, .5);
 }
 
+.doc a {
+  transition: all 0.3s;
+}
+.doc a:link, a:visited, a:active {
+  text-decoration: none;
+  color: #00E;
+  border-bottom: 1px solid $mybgcol;
+}
+.doc a:hover {
+  text-decoration: none;
+  color: #33F;
+  border-bottom: 1px solid #00E;
+}
 
 
 @import url(http://fonts.googleapis.com/css?family=Nunito:300);
@@ -122,36 +162,40 @@ p    { text-align: center; }
 sup  { font-size: 36px; font-weight: 100; line-height: 55px; }
 */
 
-.button
+#button
 {
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
-  color: #0C5;
-
+  
   font-size: 24px;
   font-family: "Nunito", sans-serif;
   font-weight: 300;
   
-  margin: 5em auto;
+  //margin: 5em auto;
   
-  position: absolute; 
-  top:0; right:0; bottom:0; left:0;
+  //position: absolute;
+  //position: relative; 
+  //top:0; right:0; bottom:0; left:0;
   
-  padding: 20px 10px;
   width: 220px;
-  height:30px;
+  max-widht: 220px;
+  display: inline-block;
+
+  height: 30px;
+
+  padding: 20px 10px;
   border-radius: 10px;
 
   background: #0D6;
   border: 1px solid #0D6;
-  color: #FFF;
+  color: #FFF; // !important;
   overflow: hidden;
   
   transition: all 0.5s;
 }
 
-.button:hover, .button:active 
+#button:hover, .button:active 
 {
   text-decoration: none;
   color: #0C5;
@@ -159,16 +203,15 @@ sup  { font-size: 36px; font-weight: 100; line-height: 55px; }
   background: #FFF;
 }
 
-.button span 
+#button span 
 {
   display: inline-block;
   position: relative;
   padding-right: 0;
-  
   transition: padding-right 0.5s;
 }
 
-.button span:after 
+#button span:after 
 {
   content: ' ';  
   position: absolute;
@@ -188,12 +231,12 @@ sup  { font-size: 36px; font-weight: 100; line-height: 55px; }
   transform: rotate(-45deg);
 }
 
-.button:hover span, .button:active span 
+#button:hover span, #button:active span 
 {
   padding-right: 30px;
 }
 
-.button:hover span:after, .button:active span:after 
+#button:hover span:after, #button:active span:after 
 {
   transition: opacity 0.5s, top 0.5s, right 0.5s;
   opacity: 1;
@@ -203,14 +246,16 @@ sup  { font-size: 36px; font-weight: 100; line-height: 55px; }
 }
 
 
-
+// https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
 .videowrapper {
     float: none;
     clear: both;
-    width: 100%;
+    width: 80%;
     position: relative;
-    padding-bottom: 56.25%;
+    padding-bottom: 56.25%; // for 16:9
     padding-top: 25px;
+    margin-left: auto; // setting both left and right to auto centers...
+    margin-right: auto;
     height: 0;
 }
 .videowrapper iframe {
@@ -221,14 +266,75 @@ sup  { font-size: 36px; font-weight: 100; line-height: 55px; }
     height: 100%;
 }
 
+@mixin margin-tb($m) {
+  margin-top: $m;
+  margin-bottom: $m;
+}
+@mixin margin-lr($m) {
+  margin-left: $m;
+  margin-right: $m;
+}
+@mixin padding-tb($m) {
+  padding-top: $m;
+  padding-bottom: $m;
+}
+@mixin padding-lr($m) {
+  padding-left: $m;
+  padding-right: $m;
+}
+
+#feature {
+  float: left;
+  width: 33%;
+  //margin-right: 1%;
+}
+$lrmargin: 18px;
+#featureheader {
+    //padding-left: 10px;
+    @include margin-lr($lrmargin);
+    @include padding-tb(5px); // defines the "height"
+    @include margin-tb(20px);
+    background-color: #888;
+    color: #eee;
+    border-radius: 8px;
+    //width: auto;
+    //display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: 1px 1px 2px #000000; // rgba(0,0,0,1);
+    //text-shadow: 1px 1px 2px #FFF; // rgba(0,0,0,1);
+    //letter-spacing: -1px;
+}
+#featuredesc {
+    font-size: 13px;
+    line-height: 1.2;
+    margin-left:  $lrmargin;
+    margin-right: $lrmargin;
+    text-align: juistfy; //center;
+}
+
 #footer {
+  // same as .doc
   color: #888;
-  clear: left;
-  margin-top: 1em;
-  text-align: center;
-  padding: 10px;
+  width:800px;
+  height:auto; 
+  margin-left:auto;
+  margin-right:auto; 
+
+  //margin-top: 1em;
+  //text-align: center;
+  padding-bottom: 60px;
+  
   font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 12pt;
   font-weight: bold;
   text-shadow: 0 2px 4px rgba(0,0,0,1);
+  
+}
+
+#footer a {
+  color: #888;
+  text-decoration: none;
 }
