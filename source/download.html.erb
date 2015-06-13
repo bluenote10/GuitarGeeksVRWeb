@@ -3,25 +3,83 @@
 <div>
   <h1>Warning</h1>
   <p>
-    GuitarGeeksVR is currently in an early alpha state, and will likely have a few bugs.
+    GuitarGeeksVR is currently in an early <em>alpha</em> state, and will likely have a few bugs.
     Furthermore, the VR experience is not yet very smooth due to some issues of the Oculus Rift library.
-    Until these issues are resolved, you will probably experience some judder.
+    Until these issues are resolved, you will probably experience some <em>judder</em>.
     In the <%=link_to "documentation", "documentation.html"%> you can find a few tips, which may help to optimize the experience.
   </p>
   
   <h1>Download</h1>
   <p>
-    <a href="#" id="button">
-      <span>Download</span>
-    </a>
-  <p>
+    GuitarGeeksVR requires a Java Runtime Environment to run.
+    If you are a Windows user and you do not have a JRE installed, we have special versions for you which are bundled with a JRE (the version differ in the JRE only, which is either 32 bit or 64 bit).
+    If you already have JRE, you can pick the cross platform version.
+    This version should work for all platforms: Windows, Mac OS X, and Linux.
+  </p>
+
+  <p><em>Current version:</em> 0.1.0 alpha</p>
+
+  <div id="rowwrapper">
+    <div class="clear"></div>
+    <div id="left-div">
+      Windows version bundled with 64-bit JRE
+    </div>
+    <div id="right-div">
+      <a href="#" id="button">
+        <span>Download</span>
+      </a>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div id="rowwrapper">
+    <div class="clear"></div>
+    <div id="left-div">
+      Windows version bundled with 32-bit JRE
+    </div>
+    <div id="right-div">
+      <a href="#" id="button">
+        <span>Download</span>
+      </a>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div id="rowwrapper">
+    <div class="clear"></div>
+    <div id="left-div">
+      Cross-platform version (Windows, Mac OS X, Linux) without JRE
+    </div>
+    <div id="right-div">
+      <a href="#" id="button">
+        <span>Download</span>
+      </a>
+    </div>
+    <div class="clear"></div>
+  </div>
     
   <h1>Installation Instructions</h1>
+
+  <div class="numberCircle">1</div>
   <p>
-    <%= lorem.sentences 5 %>
+    Download an appropriate version from above.
+    GuitarGeeksVR does not require any actual installation.
+    Extract the archive anywhere you want to run it.
+    In order to launch GuitarGeeksVR use either the .exe on Windows or one of the launch scripts on Linux/Mac OS X.
+    It is recommended to launch GuitarGeeksVR once in order to create its configuration directory.
   </p>
-  
-  <p>Test</p>
+  <div class="numberCircle">2</div>
+  <p>
+    Since GuitarGeeksVR does not include any tabs, you have to download some tabs from an external site.
+    In order to use the tabs you have tell GuitarGeeksVR where your tabs are stored.
+    The easiest way is to copy in the subfolder tabs in the GuitarGeeksVR configuration folder.
+    The configuration folder is located in
+    &#37;LOCALAPPDATA&#37;/GuitarGeeks (Windows),
+    $home/Library/Application Support/GuitarGeeks (Mac OS X), or
+    $home/.GuitarGeeks (Linux).
+  </p>  
+  <div class="numberCircle">3</div>  
+  <p>
+    <em>Optional:</em> Install an improved soundfont.
+  </p>
 </div>
 
 

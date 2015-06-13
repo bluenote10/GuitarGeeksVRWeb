@@ -15,6 +15,14 @@ $bright-highlight: #FF0000;
   background-color: #F00;
 }
 
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 /*
 .headdiv {
   margin-top: 20px;
@@ -209,11 +217,13 @@ sup  { font-size: 36px; font-weight: 100; line-height: 55px; }
   max-widht: 220px;
   display: inline-block;
 
-  height: 30px;
+  height: 20px;
 
   padding: 20px 10px;
   border-radius: 10px;
 
+  margin: 0;
+  
   background: #0D6;
   border: 1px solid #0D6;
   color: #FFF; // !important;
@@ -235,6 +245,9 @@ sup  { font-size: 36px; font-weight: 100; line-height: 55px; }
   display: inline-block;
   position: relative;
   padding-right: 0;
+  // this centers vertically:
+  @include vertical-align;
+  
   transition: padding-right 0.5s;
 }
 
@@ -279,7 +292,7 @@ sup  { font-size: 36px; font-weight: 100; line-height: 55px; }
     clear: both;
     width: 80%;
     position: relative;
-    padding-bottom: 56.25%; // for 16:9
+    padding-bottom: 45%; // 0.8 (pct width) * 9 / 16, default value would be 56.25%; for 100% width and for 16:9
     padding-top: 25px;
     margin-left: auto; // setting both left and right to auto centers...
     margin-right: auto;
@@ -382,6 +395,74 @@ $lrmargin: 18px;
 */
 
 
+/*
+#rowwrapper{
+  width: 100%;
+  //height:auto;
+  border:1px solid green;
+  //display: block;
+  //clear: both;
+  overflow: hidden;
+  padding: 10px;
+}
+
+#left-div{
+  float: left;
+  //width: 50%;
+  border:1px solid blue;
+  @include vertical-align;
+}
+
+#right-div{
+  //float: right;
+  //width:40%;
+  border:1px solid red;
+  @include vertical-align;
+}
+*/
+#rowwrapper {
+    //border:1px solid red;
+    width: 100%;
+    padding:5px;
+    //overflow:hidden;
+    //position: relative;
+    height: 90px;
+}
+#left-div {
+    //border:1px solid blue;
+    //width:200px;
+    float:left;
+    display: inline-block;
+    @include vertical-align;
+}
+#right-div {
+    //border:1px solid green;
+    //width:300px;
+    float:right;
+    display: inline-block;
+    @include vertical-align;
+}
+
+.numberCircle {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    background: #fff;
+    border: 2px solid #666;
+    color: #666;
+    text-align: center;
+    
+    font: 32px Arial, sans-serif;
+}
+
+
 #footer {
   // same as .doc
   color: #888;
@@ -405,3 +486,4 @@ $lrmargin: 18px;
   color: #888;
   text-decoration: none;
 }
+
