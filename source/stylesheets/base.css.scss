@@ -53,14 +53,35 @@ h1 {
 */
 
 h1 {
-  margin-top: 60px;
-  display: inline-block;
-  font-weight: bold;
-  font-size: 30px;
-  letter-spacing: 1px;
   margin: 0px;
-  color: rgba(1,1,1,0.8);
-  text-shadow: 0px 0px 8px rgba(0,0,0,0.3);  
+  margin-top: 30px;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 31.5px;
+  font-feature-settings: "kern";
+  letter-spacing: 1px;
+  //color: rgba(1,1,1,0.8);
+  color: #ddd;
+  text-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+
+font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+font-style: normal;
+font-weight: 300;
+font-size: 21px;
+line-height: normal;
+font-size-adjust: none;
+font-stretch: normal;
+font-language-override: normal;
+font-synthesis: weight style;
+font-variant: normal;
+color: #DDD;
+text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+font-feature-settings: "kern";
+font-kerning: normal;        
+  display: block;
+  font-size: 31.5px; // 1.5em;
+  font-weight: bold;
+  
 }
 
 
@@ -96,10 +117,10 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEElEQVQImW
 
 @import url(http://fonts.googleapis.com/css?family=Lato:300);
 
-$mybgcol: #eee;
+$mybgcol: #444; //#eee;
 
 .doc {
-  color: #222; // #ddd
+  color: #ddd;
   font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -127,15 +148,16 @@ $mybgcol: #eee;
   padding-right:    30px;
   padding-top:      5px;
   padding-bottom:   5px;
-  font-size:        18px; /* default css is 16 */
+  font-size:        16px; /* default css is 16 */
   //font-family:      "Noto Serif", serif; /* "Old Standard TT", "Gentium Book Basic", "Ubuntu" */
   text-align: justify;
   //text-align: center;
-  text-shadow: 0 0 2px rgba(0,0,0,0.5);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
   border-radius: 15px;
 -webkit-box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, .5);
    -moz-box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, .5);
         box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, .5);
+
 }
 
 .doc a {
@@ -143,15 +165,20 @@ $mybgcol: #eee;
 }
 .doc a:link, a:visited, a:active {
   text-decoration: none;
-  color: #00E;
+  color: #F90; // #00E;
   border-bottom: 1px solid $mybgcol;
 }
 .doc a:hover {
   text-decoration: none;
-  color: #33F;
-  border-bottom: 1px solid #00E;
+  color: #FA1; // #33F;
+  border-bottom: 1px solid #FA1; //#00E;
 }
 
+.doc em {
+  font-weight: bold;
+  font-style: normal;
+  color: #eee;
+}
 
 @import url(http://fonts.googleapis.com/css?family=Nunito:300);
 
@@ -283,6 +310,44 @@ sup  { font-size: 36px; font-weight: 100; line-height: 55px; }
   padding-right: $m;
 }
 
+
+
+#feature {
+  //float: left;
+  //width: 33%;
+  //margin-right: 1%;
+}
+$lrmargin: 18px;
+#featureheader {
+    //padding-left: 10px;
+    //@include margin-lr($lrmargin);
+    @include padding-tb(5px); // defines the "height"
+    @include margin-tb(20px);
+    //margin-left: auto;
+    //margin-right: auto;
+    background-color: #333; //#888;
+    color: #eee;
+    border-radius: 8px;
+    //width: auto;
+    //display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px #000000; // rgba(0,0,0,1);
+    //text-shadow: 1px 1px 2px #FFF; // rgba(0,0,0,1);
+    letter-spacing: 1px;
+    //float: left;
+    width: 100%;
+}
+#featuredesc {
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: juistfy; //center;
+    clear: left;
+}
+
+/*
 #feature {
   float: left;
   width: 33%;
@@ -314,6 +379,8 @@ $lrmargin: 18px;
     margin-right: $lrmargin;
     text-align: juistfy; //center;
 }
+*/
+
 
 #footer {
   // same as .doc
