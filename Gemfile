@@ -12,3 +12,18 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 
 # Windows does not come with time zone data
 gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby]
+
+# For syntax highlighting: https://github.com/middleman/middleman-syntax
+gem "middleman-syntax"
+
+# For deploying
+gem 'middleman-deploy', '~> 1.0'
+
+# In order not to echo password on deploy HighLine or Termios is required
+gem 'highline'
+
+
+
+# note from a ruby noob:
+#   to reload/build:
+#     bundle install

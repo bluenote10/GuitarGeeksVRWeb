@@ -462,6 +462,53 @@ $lrmargin: 18px;
     font: 32px Arial, sans-serif;
 }
 
+code {
+  white-space: pre;
+  display: inline-block;
+  margin: 0px;
+  font: 14px/1.8em Menlo,Consolas,"Courier New",Courier,"Liberation Mono",monospace;
+  background-color: #2B2B2B;
+  color: #FFF;
+  border-radius: 5px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3) inset, 0px 1px 0px rgba(255, 255, 255, 0.1), 0px -1px 0px rgba(0, 0, 0, 0.5);    
+  margin: 0px;
+  padding: 0px;
+}
+
+p > code {
+  padding: 0px 0.5em;
+}
+li > code {
+  padding: 0px 0.5em;
+}
+
+pre > code {
+  white-space: pre;
+  display: block;
+  font: 14px/1.8em Menlo,Consolas,"Courier New",Courier,"Liberation Mono",monospace;
+  position: relative;
+  left: 0;
+  width: 100%;
+  overflow: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+pre {
+  overflow: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+.codewrap {
+  //margin: 1em 0px;
+  //padding: 10px 0px;
+  //overflow: auto;
+  width: 100%;
+  text-align: left;
+  margin: 0px;
+  padding: 0px;
+}
 
 #footer {
   // same as .doc

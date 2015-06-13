@@ -70,3 +70,16 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+activate :syntax
+
+
+activate :deploy do |deploy|
+  deploy.method   = :sftp
+  deploy.host     = 'ssh.guitargeeksvr.com'
+  deploy.port     = 22
+  deploy.path     = '/www/'
+  deploy.user     = 'guitargeeksvr.com'
+  # deploy.password = 'secret' # no default
+end
+

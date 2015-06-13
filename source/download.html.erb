@@ -70,15 +70,41 @@
   <p>
     Since GuitarGeeksVR does not include any tabs, you have to download some tabs from an external site.
     In order to use the tabs you have tell GuitarGeeksVR where your tabs are stored.
-    The easiest way is to copy in the subfolder tabs in the GuitarGeeksVR configuration folder.
-    The configuration folder is located in
-    &#37;LOCALAPPDATA&#37;/GuitarGeeks (Windows),
-    $home/Library/Application Support/GuitarGeeks (Mac OS X), or
-    $home/.GuitarGeeks (Linux).
+    The easiest way is to copy your tabs in the subfolder <code>tabs</code> in the GuitarGeeksVR configuration folder.
+    The configuration folder is located in:
+    <ul>
+      <li><code>&#37;LOCALAPPDATA&#37;/GuitarGeeksVR</code> on Windows</li>
+      <li><code>~/Library/Application Support/.GuitarGeeksVR</code> on Mac OS X</li>
+      <li><code>~/.GuitarGeeksVR</code> on Linux</li>
+    </ul>
+    <p>
+    If you want to, you can structure your tabs into arbitrary subfolders, which can help to search your tabs within GuitarGeeksVR.
+    If you don't want to store your tabs in this folder, or if you want to use several tab folders in different locations, you can modify the file <code>settings.json</code> in the configuration folder. For example your configuration could look like this:   </p>
+    <div class="codewrap">
+      <% code("json") do %>
+{
+  "watchedTabFolders" : [ "/home/yourname/.GuitarGeeksVR/tabs",
+                          "/home/yourname/some/other/path" ],
+  "backgroundColors" : [ "080F5EFF",
+                         "222222FF",
+                         "002A36FF",
+                         "1F2229FF",
+                         "042129FF",
+                         "4997D0FF",
+                         "EEEEEEFF" ],
+  "headRollThreshold" : 30.0,
+  "soundfont" : "/home/yourname/.GuitarGeeksVR/soundfonts/Unison.SF2"
+}<% end %>
+    </div>
   </p>  
   <div class="numberCircle">3</div>  
   <p>
-    <em>Optional:</em> Install an improved soundfont.
+    <em>Optional:</em>
+    Install a soundfont.
+    The overall sound quality depends a lot on the MIDI soundfont that is used.
+    Most JRE include a soundfont, but in general it is low quality.
+    To improve the sound quality, you can experiment with different soundfonts.
+    In order to tell GuitarGeeksVR to use a specific soundfont, you have to add a corresponding entry to your <code>settings.json</code> (see example above).
   </p>
 </div>
 
