@@ -79,32 +79,21 @@
     </ul>
     <p>
     If you want to, you can structure your tabs into arbitrary subfolders, which can help to search your tabs within GuitarGeeksVR.
-    If you don't want to store your tabs in this folder, or if you want to use several tab folders in different locations, you can modify the file <code>settings.json</code> in the configuration folder. For example your configuration could look like this:   </p>
-    <div class="codewrap">
-      <% code("json") do %>
-{
-  "watchedTabFolders" : [ "/home/yourname/.GuitarGeeksVR/tabs",
-                          "/home/yourname/some/other/path" ],
-  "backgroundColors" : [ "080F5EFF",
-                         "222222FF",
-                         "002A36FF",
-                         "1F2229FF",
-                         "042129FF",
-                         "4997D0FF",
-                         "EEEEEEFF" ],
-  "headRollThreshold" : 30.0,
-  "soundfont" : "/home/yourname/.GuitarGeeksVR/soundfonts/Unison.SF2"
-}<% end %>
-    </div>
+    If you don't want to store your tabs in this folder, or if you want to use several tab folders in different locations, you can modify the file <code>settings.json</code> in the configuration folder.
+    See the <%=link_to "documentation", "documentation.html"%> for an example.
+    After you have added new songs to the your tab folders, you have to press the "rescan" button
+    <object width="16px" data="../images/load-a.svg" type="image/svg+xml"></object>
+    in order to refresh your tab collection.
+    </p>
   </p>  
   <div class="numberCircle">3</div>  
   <p>
-    <em>Optional:</em>
+    <em>Optional but recommended:</em>
     Install a soundfont.
     The overall sound quality depends a lot on the MIDI soundfont that is used.
     Most JRE include a soundfont, but in general it is low quality.
     To improve the sound quality, you can experiment with different soundfonts.
-    In order to tell GuitarGeeksVR to use a specific soundfont, you have to add a corresponding entry to your <code>settings.json</code> (see example above).
+    In order to tell GuitarGeeksVR to use a specific soundfont, you have to add a corresponding entry to your <code>settings.json</code> (see example in the <%=link_to "documentation", "documentation.html"%>).
   </p>
 </div>
 

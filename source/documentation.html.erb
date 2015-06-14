@@ -2,6 +2,82 @@
 title: Documentation
 ---
 
+
+<h1>Keyboard Shortcuts</h1>
+
+<p>
+  GuitarGeeksVR is mainly controlled by head gestures.
+  For advanced functionality (or if you even prefer using the keyboard) the following shortcuts are available:
+</p>
+
+<table class="tg">
+  <tr>
+    <td class="alignC"><kbd>ENTER</kbd></td>
+    <td>Recenter HMD (this is probably required once after startup)</td>
+  </tr>
+  <tr>
+    <td class="alignC"><kbd>SPACE</kbd></td>
+    <td>Start/stop playback</td>
+  </tr>
+  <tr>
+    <td class="alignC"><kbd>LEFT</kbd> / <kbd>RIGHT</kbd></td>
+    <td>Seek forward/backward</td>
+  </tr>
+  <tr>
+    <td class="alignC"><kbd>UP</kbd> / <kbd>DOWN</kbd></td>
+    <td>Rotate fretboard</td>
+  </tr>
+  <tr>
+    <td class="alignC"><kbd>TAB</kbd></td>
+    <td>Cycle through scene configurations</td>
+  </tr>
+</table>
+
+<p>
+To be written...
+</p>
+
+
+
+
+<h1>Configuration</h1>
+
+<p>
+  All settings of GuitarGeeksVR are stored in its configurations folder which is located in:
+  <ul>
+    <li><code>&#37;LOCALAPPDATA&#37;/GuitarGeeksVR</code> on Windows</li>
+    <li><code>~/Library/Application Support/.GuitarGeeksVR</code> on Mac OS X</li>
+    <li><code>~/.GuitarGeeksVR</code> on Linux</li>
+  </ul>
+  GuitarGeeksVR does not modify the registry nor does it require any kind of installation.
+  The default settings are created the first time you run GuitarGeeksVR.
+</p>
+<p>
+  The main settings are stored in a file called <code>settings.json</code>.
+  The following example shows a <code>settings.json</code> which sets two tab folders to be monitored and adds custom soundfont:
+</p>
+  <div class="codewrap">
+      <% code("json") do %>
+{
+  "watchedTabFolders" : [ "/home/yourname/.GuitarGeeksVR/tabs",
+                          "/home/yourname/some/other/path" ],
+  "backgroundColors" : [ "080F5EFF",
+                         "222222FF",
+                         "002A36FF",
+                         "1F2229FF",
+                         "042129FF",
+                         "4997D0FF",
+                         "EEEEEEFF" ],
+  "headRollThreshold" : 30.0,
+  "soundfont" : "/home/yourname/.GuitarGeeksVR/soundfonts/Unison.SF2"
+}<% end %>
+  </div>
+<p>
+  To specify path names it should not matter if you use <code>/</code> or <code>\\</code> as path separator.
+  GuitarGeeksVR does not scan the tab folders when it starts -- scanning huge tab folders can be slow and this would mean very long load times.
+  When you have added new tabs to your folders, You have to press the "rescan" button to force the scan.
+</p>
+
 <p>
 To be written...
 </p>
