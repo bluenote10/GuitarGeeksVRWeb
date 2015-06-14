@@ -74,12 +74,19 @@ end
 activate :syntax
 
 
-activate :deploy do |deploy|
-  deploy.method   = :sftp
-  deploy.host     = 'ssh.guitargeeksvr.com'
-  deploy.port     = 22
-  deploy.path     = '/www/'
-  deploy.user     = 'guitargeeksvr.com'
-  # deploy.password = 'secret' # no default
-end
+#activate :deploy do |deploy|
+#  deploy.method   = :sftp
+#  deploy.host     = 'ssh.guitargeeksvr.com'
+#  # deploy.password = 'secret' # no default
+#end
 
+activate :deploy do |deploy|
+  deploy.method = :rsync
+  deploy.host     = 'ssh.guitargeeksvr.com'
+  deploy.path     = '/www/'
+  deploy.port     = 22
+  deploy.user     = 'guitargeeksvr.com'
+  deploy.clean    = true # remove orphaned files on remote host, default: false
+  # Optional Settings
+  # deploy.flags = '-rltgoDvzO --no-p --del' # add custom flags, default: -avz
+end
