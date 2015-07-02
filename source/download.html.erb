@@ -69,7 +69,7 @@
   <div class="numberCircle">2</div>
   <p>
     Since GuitarGeeksVR does not include any tabs, you have to download some tabs from an external site.
-    In order to use the tabs you have tell GuitarGeeksVR where your tabs are stored.
+    In order to use the tabs you have to tell GuitarGeeksVR where your tabs are stored.
     The easiest way is to copy your tabs in the subfolder <code>tabs</code> in the GuitarGeeksVR configuration folder.
     The configuration folder is located in:
     <ul>
@@ -81,7 +81,9 @@
     If you want to, you can structure your tabs into arbitrary subfolders, which can help to search your tabs within GuitarGeeksVR.
     If you don't want to store your tabs in this folder, or if you want to use several tab folders in different locations, you can modify the file <code>settings.json</code> in the configuration folder.
     See the <%=link_to "documentation", "documentation.html"%> for an example.
-    After you have added new songs to the your tab folders, you have to press the "rescan" button
+    <em>Important:</em>
+    GuitarGeeksVR will not scan the song folders automatically because it would slow down the start up when using huge collections.
+    Instead you have to press the "rescan" button
     <object width="16px" data="../images/load-a.svg" type="image/svg+xml"></object>
     in order to refresh your tab collection.
     </p>
